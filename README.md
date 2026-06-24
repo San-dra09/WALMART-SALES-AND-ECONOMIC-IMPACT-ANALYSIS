@@ -49,7 +49,7 @@ A supporting correlation analysis quantifies the strength of each economic relat
 
 ---
 
-## Outstanding Insights
+## Insights
 
 ### 1. Holidays punch far above their weight
 Holiday weeks generate **7.50% of total revenue** despite making up only **450 of 6,435 weeks** in the dataset (~7%). On a per-week basis, the average holiday week brings in **$1.12M vs. $1.04M** for a regular week — a **7.8% uplift**. That's a real, verified effect (not dashboard rounding), and it lines up with the original brief's instruction to weight holiday weeks roughly 5x in evaluation: holiday weeks aren't just *more frequent revenue events*, each one individually outsells a typical week. **The single highest-selling week in the entire dataset was the week of Dec 24, 2010 — led by Store 14 at $3.82M, nearly 4x that store's typical week.** Demand forecasting and inventory planning should be holiday-first, not economy-first.
@@ -99,23 +99,9 @@ No single store wins every cut. Store 20 is the dominant performer by scale, but
 ## Methodology
 
 - **Data:** Weekly sales data for 45 Walmart stores (Feb 2010 – Oct 2012; 6,435 store-weeks), paired with weekly CPI, unemployment rate, fuel price, and temperature. Source: [Kaggle — Walmart Dataset](https://www.kaggle.com/datasets/yasserh/walmart-dataset).
-- **Tooling:**
+- **Tools Used:**
   - **SQL** for exploratory querying — holiday vs. regular week averages, store rankings, monthly/yearly trends, CPI and unemployment stratification (see `Walmart_Query.sql`)
   - **Power BI** for dashboarding (Sales Overview + Store Analysis pages with cross-filtering by Store, Year, Month, and Holiday flag)
-  - **Excel** for the correlation analysis (Pearson correlation between weekly sales and each economic variable), cross-verified here against the raw data
-- **Approach:** KPI rollups for headline metrics → store-level benchmarking (top/bottom/consistency) → time-series decomposition (monthly trend, CPI trend) → bivariate correlation testing against economic variables → cross-stress testing (store performance under peak fuel cost and peak unemployment conditions).
-- **Verification:** All headline figures in this report were recomputed directly from the cleaned dataset (`Walmart_Stores.xlsx`) using pandas, and matched the dashboard and correlation sheet to the reported precision.
+  - **Excel** for the correlation analysis (Pearson correlation between weekly sales and each economic variable), cross-verified here against the raw data.
 
-## Files in This Repository
 
-| File | Description |
-|---|---|
-| `Sales_Overview.jpg` | Dashboard page 1 — company KPIs, store benchmarks, holiday impact |
-| `Store_Analysis.jpg` | Dashboard page 2 — monthly trend, CPI trend, top stores, economic scatter plots |
-| `Correlational_Analysis.jpg` | Pearson correlation table: sales vs. temperature, fuel price, unemployment |
-| `Walmart_Stores.xlsx` | Cleaned dataset (raw weekly data, pivot tables, correlation sheet) |
-| `Walmart_Query.sql` | SQL exploration queries used to derive holiday, store, time, and economic comparisons |
-
----
-
-*Dashboard built in Power BI; exploratory analysis in SQL; correlation testing in Excel. Findings verified against the raw dataset.*
