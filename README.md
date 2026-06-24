@@ -47,6 +47,17 @@ A supporting correlation analysis quantifies the strength of each economic relat
 | Performance Gap (Best vs Worst) | **~8.1x** |
 | Highest Single-Week Sales | **Store 14, week of Dec 24 2010 — $3.82M** |
 
+
+---
+  
+## Methodology
+
+- **Data:** Weekly sales data for 45 Walmart stores (Feb 2010 – Oct 2012; 6,435 store-weeks), paired with weekly CPI, unemployment rate, fuel price, and temperature. Source: [Kaggle — Walmart Dataset](https://www.kaggle.com/datasets/yasserh/walmart-dataset).
+- **Tools Used:**
+  - **SQL** for exploratory querying — holiday vs. regular week averages, store rankings, monthly/yearly trends, CPI and unemployment stratification (see `Walmart_Query.sql`)
+  - **Power BI** for dashboarding (Sales Overview + Store Analysis pages with cross-filtering by Store, Year, Month, and Holiday flag)
+  - **Excel** for the correlation analysis (Pearson correlation between weekly sales and each economic variable), cross-verified here against the raw data.
+
 ---
 
 ## Insights
@@ -85,16 +96,6 @@ The data runs **Feb 2010 through Oct 2012** (the dashboard's monthly chart caps 
 - **Steadiest performer relative to its own size:** Store 37
 
 No single store wins every cut. Store 20 is the dominant performer by scale, but smaller stores like 28 and 10 lead under specific stress conditions, and Store 37 — nowhere near the top by revenue — is actually the most internally consistent. This is a strong candidate for follow-up segmentation: clustering stores by sensitivity profile and stability, not just ranking them by total revenue.
-
----
-  
-## Methodology
-
-- **Data:** Weekly sales data for 45 Walmart stores (Feb 2010 – Oct 2012; 6,435 store-weeks), paired with weekly CPI, unemployment rate, fuel price, and temperature. Source: [Kaggle — Walmart Dataset](https://www.kaggle.com/datasets/yasserh/walmart-dataset).
-- **Tools Used:**
-  - **SQL** for exploratory querying — holiday vs. regular week averages, store rankings, monthly/yearly trends, CPI and unemployment stratification (see `Walmart_Query.sql`)
-  - **Power BI** for dashboarding (Sales Overview + Store Analysis pages with cross-filtering by Store, Year, Month, and Holiday flag)
-  - **Excel** for the correlation analysis (Pearson correlation between weekly sales and each economic variable), cross-verified here against the raw data.
 
  ---
  
