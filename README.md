@@ -22,10 +22,10 @@ A supporting correlation analysis quantifies the strength of each economic relat
 ## Dashboard Preview
 
 ### Sales Overview
-![Sales Overview Dashboard](Page 1.jpg)
+![Sales Overview Dashboard](Page1.jpg)
 
 ### Store Analysis
-![Store Analysis Dashboard](Page 2.jpg)
+![Store Analysis Dashboard](Page2.jpg)
 
 ---
 
